@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "752bfb50-c7ba-4435-bc03-f8fcffa55d0c",
+		"name": "PBL5_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26675063"
+	},
+	"item": [
+		{
+			"name": "/login/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user001@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/post/ (add user)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user002@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user002",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user-list/",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/admin-list/",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/user/id/update/ (update info + change password)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "newpassword",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/users/6/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"6",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
